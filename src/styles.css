@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+  text-decoration: none;
+}
+div,ul,a,li,ol,section {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html , body {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  position: relative;
+}
+.header,.footer {
+  position: absolute;
+}
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
