@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Course } from '../../interfaces/Course';
 
 @Component({
   selector: 'app-course',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course.component.css']
 })
 
-export class CourseComponent implements OnInit {
-  constructor() { }
+
+export class CourseComponent implements OnInit,Course {
+  title = 'asdasd';
+  id = 1;
+  duration = 'asdad';
+  date = 'asdad';
+  constructor() {
+  }
   ngOnInit() {
 
   }
-
-
 }

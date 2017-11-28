@@ -20,6 +20,7 @@ import { CourseComponent } from './components/course/course.component';
     LogInComponent,
     CourseComponent,
     MenuComponent
+
   ],
   imports: [
     BrowserModule
