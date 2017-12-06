@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from '../../interfaces/Course';
+import { Course } from '../../../interfaces/Course';
 
 @Component({
   selector: 'app-course',
-  templateUrl: './course.component.html',
-  styleUrls: ['./course.component.css']
+  templateUrl: 'course.component.html',
+  styleUrls: ['course.component.css']
 })
 
 

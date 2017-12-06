@@ -8,7 +8,9 @@ import { LogoComponent } from './components/header/logo/logo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/header/menu/menu.component';
 import { LogInComponent } from './components/header/log-in/log-in.component';
-import { CourseComponent } from './components/course/course.component';
+import { CourseComponent } from './components/courses/course/course.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { ToolboxComponent } from './components/toolbox/toolbox.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { CourseComponent } from './components/course/course.component';
     FooterComponent,
     LogInComponent,
     CourseComponent,
-    MenuComponent
+    MenuComponent,
+    CoursesComponent,
+    ToolboxComponent
 
   ],
   imports: [

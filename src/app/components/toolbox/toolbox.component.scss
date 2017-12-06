@@ -1,0 +1,22 @@
+.b-toolbox{
+  padding: 20px;
+}
+.f-toolbox {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  &__label {
+    max-width: 500px;
+    width: 100%;
+  }
+  &__input {
+    width: calc(100% - 24px);
+    padding: 0 10px;
+  }
+  &__find{
+    margin-left: 20px;
+  }
+  &__add {
+    margin-left: auto;
+  }
+}
