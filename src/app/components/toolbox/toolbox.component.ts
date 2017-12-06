@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-toolbox',
@@ -6,15 +6,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['toolbox.component.scss']
 })
 export class ToolboxComponent implements OnInit {
-  @Input('value') currentValue = '';
-
+  newValue:string = '';
   constructor() {
   }
   findCourse(){
-    console.log(this.currentValue);
+    console.log(this.newValue);
+    this.newValue = '';
   }
 
   ngOnInit() {
   }
+
 
 }
