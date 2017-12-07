@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 a {
   text-decoration: none;
+  color: #fff;
+  display: block;
 }
 div,ul,a,li,ol,section {
   box-sizing: border-box;
