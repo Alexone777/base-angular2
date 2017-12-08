@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import { Course } from '../../../interfaces/Course';
 
 @Component({
@@ -9,13 +9,22 @@ import { Course } from '../../../interfaces/Course';
 
 
 export class CourseComponent implements OnInit,Course {
-  title = 'Video course';
-  id = 1;
-  duration = '1h26m';
-  date = '22.12.2017';
+  @Input('title') title;
+  @Input('id') id;
+  @Input('duration') duration;
+  @Input('date') date;
+  @Output('delete') deleteItem = new EventEmitter();
   constructor() {
   }
   ngOnInit() {
 
+  }
+  editCourse(){
+    console.log(123);
+  }
+  deleteCourse(){
+    this.deleteItem.emit({
+      value : 5
+    })
   }
 }
