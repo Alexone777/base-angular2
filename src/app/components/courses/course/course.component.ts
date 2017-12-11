@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
-import { Course } from '../../../interfaces/Course';
 
 @Component({
   selector: 'app-course',
@@ -8,7 +7,7 @@ import { Course } from '../../../interfaces/Course';
 })
 
 
-export class CourseComponent implements OnInit,Course {
+export class CourseComponent implements OnInit {
   @Input('init') course;
   @Output('delete') deleteItem = new EventEmitter();
 
