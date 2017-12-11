@@ -9,10 +9,7 @@ import { Course } from '../../../interfaces/Course';
 
 
 export class CourseComponent implements OnInit,Course {
-  @Input('title') title;
-  @Input('id') id;
-  @Input('duration') duration;
-  @Input('date') date;
+  @Input('init') course;
   @Output('delete') deleteItem = new EventEmitter();
   constructor() {
   }
