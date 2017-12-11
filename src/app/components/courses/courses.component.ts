@@ -8,6 +8,10 @@ import { Course } from '../../interfaces/Course';
 })
 export class CoursesComponent implements OnInit,Course {
   public courseList: Course[];
+  title: string;
+  id : number;
+  duration: string;
+  date: string;
   constructor() { }
 
   ngOnInit() {
