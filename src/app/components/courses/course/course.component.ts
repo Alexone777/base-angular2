@@ -11,10 +11,12 @@ import { Course } from '../../../interfaces/Course';
 export class CourseComponent implements OnInit,Course {
   @Input('init') course;
   @Output('delete') deleteItem = new EventEmitter();
+
+
   constructor() {
   }
   ngOnInit() {
-
+    console.log(this.course.id);
   }
   editCourse(){
     console.log(123);
