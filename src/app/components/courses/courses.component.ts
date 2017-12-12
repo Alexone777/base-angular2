@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from '../../interfaces/Course';
+import { ICourse } from '../../interfaces/ICourse';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['courses.component.scss']
 })
-export class CoursesComponent implements OnInit,Course {
-  public courseList: Course[];
+export class CoursesComponent implements OnInit,ICourse {
+  public courseList: ICourse[];
   title: string;
   id : number;
   duration: string;

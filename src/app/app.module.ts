@@ -11,7 +11,7 @@ import { MenuComponent } from './components/header/menu/menu.component';
 import { LogInComponent } from './components/header/log-in/log-in.component';
 import { CourseComponent } from './components/courses/course/course.component';
 import { CoursesComponent } from './components/courses/courses.component';
-import { ToolboxComponent } from './components/toolbox/toolbox.component';
+import { ToolboxComponent } from './components/courses/toolbox/toolbox.component';
 
 
 @NgModule({
