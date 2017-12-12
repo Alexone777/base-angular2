@@ -9,7 +9,7 @@ export class ToolboxComponent implements OnInit {
   newValue:string = '';
   constructor() {
   }
-  findCourse(){
+  addCourse(){
     console.log(this.newValue);
     this.newValue = '';
   }
