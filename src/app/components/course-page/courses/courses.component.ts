@@ -3,7 +3,7 @@ import { ICourse } from '../../interfaces/ICourse';
 
 @Component({
   selector: 'app-courses',
-  templateUrl: './courses.component.html',
+  templateUrl: 'courses.component.html',
   styleUrls: ['courses.component.scss']
 })
 export class CoursesComponent implements OnInit,ICourse {

@@ -9,9 +9,10 @@ import { LogoComponent } from './components/header/logo/logo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/header/menu/menu.component';
 import { LogInComponent } from './components/header/log-in/log-in.component';
-import { CourseComponent } from './components/courses/course/course.component';
-import { CoursesComponent } from './components/courses/courses.component';
-import { ToolboxComponent } from './components/courses/toolbox/toolbox.component';
+import { CourseComponent } from './components/course-page/courses/course/course.component';
+import { CoursesComponent } from './components/course-page/courses/courses.component';
+import { ToolboxComponent } from './components/course-page/toolbox/toolbox.component';
+import { CoursePageComponent } from './components/course-page/course-page.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ToolboxComponent } from './components/courses/toolbox/toolbox.component
     CourseComponent,
     MenuComponent,
     CoursesComponent,
-    ToolboxComponent
+    ToolboxComponent,
+    CoursePageComponent
 
   ],
   imports: [

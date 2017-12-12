@@ -1,8 +1,0 @@
-<div class="container">
-  <app-toolbox></app-toolbox>
-  <ul class="l-courses">
-    <li class="l-courses__item" *ngFor="let course of courseList" >
-      <app-course [init]="course" (delete)="deleteItem($event)"></app-course>
-    </li>
-  </ul>
-</div>
