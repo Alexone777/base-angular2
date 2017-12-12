@@ -6,4 +6,5 @@ export interface ICourse {
   id : number ;
   duration : string;
   date : string;
+  description: string;
 }
