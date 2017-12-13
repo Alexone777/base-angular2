@@ -1,0 +1,30 @@
+.b-log-in {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+  background: #3b5998;
+}
+.f-log-in {
+  display: block;
+  &__label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__input {
+    height: 20px;
+    &:focus {
+      outline: 1px solid #999999;
+      outline-offset: 1px;
+    }
+  }
+  &__text {
+    color: #ffffff;
+  }
+}

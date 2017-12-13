@@ -16,12 +16,20 @@ export class CourseService {
     return this.courseList
   }
 
-  public createCourse(){
-    return ''
+  public createCourse({
+    id,
+    date,
+    description,
+    duration,
+    title
+  }): ICourse {
+    return {
+      id, date, description, duration, title
+    }
   }
 
   public getItemById(id:number){
-    return this.coursesList.find(item => item.id === id)
+    return this.coursesList.filter(item => item.id === id)
   }
 
   public updateItem(course: ICourse){
@@ -29,7 +37,7 @@ export class CourseService {
     return this.coursesList
   }
   public removeItem(id:number){
-    return ''
+    return this.coursesList.filter(item => item.id !== id)
   }
 
 }

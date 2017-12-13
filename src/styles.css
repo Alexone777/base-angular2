@@ -33,3 +33,12 @@ body {
   background: #3b5998;
   color: #ffffff;
 }
+.container  {
+  max-width: 1200px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 20px;
+  text-align: center;
+  height: 100%;
+}
