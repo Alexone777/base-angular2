@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthorizationService {
   private IsAuthenticated: boolean;
-  IsAuthenticated = false;
   constructor(){
 
   }
@@ -11,15 +10,17 @@ export class AuthorizationService {
   logIn(IsAuthenticated){
     console.log('login');
     localStorage.setItem('user', 'anyUser');
-    localStorage.setItem('password', 'anePassword');
-    IsAuthenticated = true
+    localStorage.setItem('password', 'anyPassword');
   }
 
   logOff(IsAuthenticated){
     console.log('login');
     localStorage.removeItem('user');
     localStorage.removeItem('password');
-    IsAuthenticated = false
+  }
+
+  IsAuthenticated() {
+    return localStorage.getItem('password') === 'anyPassword';
   }
 
   GetUserInfo(): string {

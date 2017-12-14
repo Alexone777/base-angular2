@@ -48,4 +48,4 @@ import {FormsModule} from "@angular/forms";
   providers: [],
   bootstrap: []
 })
-export class ShareModule { }
+export class SharedModule { }

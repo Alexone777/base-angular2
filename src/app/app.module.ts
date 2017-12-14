@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 
 import {AppComponent} from './app.component';
 import {CoreModule} from "./core/core.module";
-import {ShareModule} from "./core/share.module";
+import {SharedModule} from "./core/shared.module";
 import { LoginPageComponent } from './components/login-page/login-page.component';
 
 
@@ -19,7 +19,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     BrowserModule,
     FormsModule,
     CoreModule,
-    ShareModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
