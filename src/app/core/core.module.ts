@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import {CourseService} from "../services/courses.service";
-import {AuthorizationService} from "../services/authorization.service";
+import {CourseService} from "./services/courses.service";
+import {AuthorizationService} from "./services/authorization.service";
 
 @NgModule({
   declarations: [],
