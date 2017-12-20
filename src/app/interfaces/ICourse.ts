@@ -5,6 +5,6 @@ export interface ICourse {
   title : string;
   id : number ;
   duration : string;
-  date : string;
+  date : any;
   description: string;
 }

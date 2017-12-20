@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthorizationService {
+  public user: string;
   constructor(){
 
   }
 
   logIn(){
-    console.log('login');
-    localStorage.setItem('user', 'anyUser');
+    console.log(this.user);
+    localStorage.setItem('user', this.user);
     localStorage.setItem('password', 'anyPassword');
   }
 

@@ -5,6 +5,10 @@
   padding: 20px;
   background: #3b5998;
   color: #ffffff;
+  border: 3px solid red;
+  &.upcomming {
+    border: 3px solid green;
+  }
   &__wrapper {
     font-size: 0;
     display: block;
@@ -35,6 +39,23 @@
   }
   &__duration {
     margin-left: 10px;
+    position: relative;
+    &.star {
+      &:before {
+        content: '';
+        background-image: url(https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-128.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        right: -100%;
+        width: 16px;
+        height: 16px;
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
   }
   &__date {
     margin-left: auto;

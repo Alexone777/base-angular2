@@ -8,10 +8,14 @@ import {AuthorizationService} from "../../core/services/authorization.service";
   providers: [AuthorizationService]
 })
 export class LoginPageComponent implements OnInit {
-
-  constructor(public authorizationService : AuthorizationService) { }
+  public user : string;
+  constructor(public authorizationService : AuthorizationService) {
+  }
 
   ngOnInit() {
   }
 
+  getUser(){
+    this.authorizationService.user = this.user;
+  }
 }

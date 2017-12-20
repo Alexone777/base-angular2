@@ -1,4 +1,4 @@
-<div class="s-log-in" *ngIf="authorizationService.IsAuthenticated()">
-  <a href="#" class="s-log-in__link-in">Log in</a>
+<div class="s-log-in">
+  <a href="#" class="s-log-in__link-in">Hello {{ authorizationService.GetUserInfo()}}</a>
   <a href="#" class="s-log-in__link-of" (click)="authorizationService.logOff()">Log of</a>
 </div>

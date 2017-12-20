@@ -12,6 +12,7 @@ import {ToolboxComponent} from "../components/course-page/toolbox/toolbox.compon
 import {CoursePageComponent} from "../components/course-page/course-page.component";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {BorderStyleDirective} from "../directives/border-style.derective";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {FormsModule} from "@angular/forms";
     MenuComponent,
     CoursesComponent,
     ToolboxComponent,
-    CoursePageComponent
+    CoursePageComponent,
+    BorderStyleDirective
   ],
   imports:[
     CommonModule,
@@ -39,7 +41,8 @@ import {FormsModule} from "@angular/forms";
     MenuComponent,
     CoursesComponent,
     ToolboxComponent,
-    CoursePageComponent
+    CoursePageComponent,
+    BorderStyleDirective
 
   ],
   providers: [],

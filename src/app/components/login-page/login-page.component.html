@@ -4,7 +4,7 @@
       <form action="" class="f-log-in">
         <label class="f-log-in__label">
           <span class="f-log-in__text">Name :</span>
-          <input type="text" class="f-log-in__input">
+          <input type="text" class="f-log-in__input" name="userField" [(ngModel)]="user" (change)="getUser()">
         </label>
         <label class="f-log-in__label">
           <span class="f-log-in__text">Password :</span>
