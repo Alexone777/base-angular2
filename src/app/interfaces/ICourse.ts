@@ -4,6 +4,7 @@
 export interface ICourse {
   title : string;
   id : number ;
+  topRated : boolean ;
   duration : string;
   date : any;
   description: string;

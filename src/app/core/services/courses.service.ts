@@ -17,13 +17,14 @@ export class CourseService {
 
   public createCourse({
     id,
+    topRated,
     date,
     description,
     duration,
     title
   }): ICourse {
     return {
-      id, date, description, duration, title
+      id,topRated, date, description, duration, title
     }
   }
 
