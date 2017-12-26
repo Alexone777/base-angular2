@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 
 export class filterCoursesByName implements PipeTransform {
-  transform( value: string ) : string {
-
+  transform( value: string ) : void {
+    console.log(value);
   }
 }
