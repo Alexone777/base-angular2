@@ -10,9 +10,11 @@ import {MenuComponent} from "./header/menu/menu.component";
 import {CoursesComponent} from "../components/course-page/courses/courses.component";
 import {ToolboxComponent} from "../components/course-page/toolbox/toolbox.component";
 import {CoursePageComponent} from "../components/course-page/course-page.component";
-import {CommonModule} from "@angular/common";
+import {CommonModule, DatePipe, UpperCasePipe} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {BorderStyleDirective} from "../directives/border-style.derective";
+import {durationPipe} from "./pipes/durationPipe.pipe";
+import {filterCoursesByName} from "./pipes/filterCoursesByName.pipe";
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import {BorderStyleDirective} from "../directives/border-style.derective";
     CoursesComponent,
     ToolboxComponent,
     CoursePageComponent,
-    BorderStyleDirective
+    BorderStyleDirective,
+    durationPipe,
+    filterCoursesByName
   ],
   imports:[
     CommonModule,
@@ -42,7 +46,9 @@ import {BorderStyleDirective} from "../directives/border-style.derective";
     CoursesComponent,
     ToolboxComponent,
     CoursePageComponent,
-    BorderStyleDirective
+    BorderStyleDirective,
+    durationPipe,
+    filterCoursesByName
 
   ],
   providers: [],

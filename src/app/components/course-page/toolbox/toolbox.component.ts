@@ -9,9 +9,12 @@ export class ToolboxComponent implements OnInit {
   newValue:string = '';
   constructor() {
   }
-  addCourse(){
+  findCourse(){
     console.log(this.newValue);
     this.newValue = '';
+  }
+  addCourse(){
+    console.log('addCourse');
   }
 
   ngOnInit() {

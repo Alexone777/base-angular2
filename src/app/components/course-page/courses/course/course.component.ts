@@ -1,16 +1,13 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import {ICourse} from "../../../../interfaces/ICourse";
-import {DatePipe} from "@angular/common";
+import {durationPipe} from "../../../../shared/pipes/durationPipe.pipe";
 
 
 @Component({
   selector: 'app-course',
   templateUrl: 'course.component.html',
   styleUrls: ['course.component.scss'],
-  providers: [
-    DatePipe
-  ],
-
+  providers: [durationPipe]
 })
 
 

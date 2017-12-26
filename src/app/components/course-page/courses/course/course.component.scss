@@ -6,6 +6,9 @@
   background: #3b5998;
   color: #ffffff;
   border: 3px solid red;
+  &.star {
+    background: #3ea998;
+  }
   &.upcomming {
     border: 3px solid green;
   }
@@ -40,7 +43,7 @@
   &__duration {
     margin-left: 10px;
     position: relative;
-    &.star {
+    .star & {
       &:before {
         content: '';
         background-image: url(https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-128.png);
