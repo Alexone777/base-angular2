@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CourseService} from "../../../core/services/courses.service";
 import {ICourse} from "../../../interfaces/ICourse";
+import {filterCoursesByName} from "../../../shared/pipes/filterCoursesByName.pipe";
+
 
 @Component({
   selector: 'app-courses',
@@ -16,9 +18,12 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    console.log();
     this.courses = this.courseService.getList()
   }
   deleteItem($event){
+    console.log();
     console.log($event)
   }
 

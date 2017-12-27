@@ -5,7 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 
 export class filterCoursesByName implements PipeTransform {
-  transform( value: string ) : void {
-    console.log(value);
+  transform( courses : any , filterVal : any ) : any  {
+    if( !filterVal ){
+      return courses
+    }
+    return courses.filter( (course) => course.title.toLowerCase().includes(filterVal.toLowerCase()) )
   }
 }

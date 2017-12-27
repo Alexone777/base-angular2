@@ -1,13 +1,14 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import {ICourse} from "../../../../interfaces/ICourse";
 import {durationPipe} from "../../../../shared/pipes/durationPipe.pipe";
+// import {filterCoursesByName} from "../../../../shared/pipes/filterCoursesByName.pipe";
 
 
 @Component({
   selector: 'app-course',
   templateUrl: 'course.component.html',
   styleUrls: ['course.component.scss'],
-  providers: [durationPipe]
+  // pipes:[ durationPipe, filterCoursesByName ]
 })
 
 
@@ -25,6 +26,7 @@ export class CourseComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.timeDiff = Math.abs(this.today.getTime() - this.course.date.getTime());
     this.diffDays = Math.ceil(this.timeDiff / (1000 * 3600 * 24));
   }

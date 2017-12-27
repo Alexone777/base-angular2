@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['toolbox.component.scss']
 })
 export class ToolboxComponent implements OnInit {
-  newValue:string = '';
+  public filterVal:string = '';
   constructor() {
   }
   findCourse(){
-    console.log(this.newValue);
-    this.newValue = '';
+    console.log(this.filterVal);
+    this.filterVal = '';
   }
   addCourse(){
     console.log('addCourse');
