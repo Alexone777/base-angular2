@@ -16,7 +16,7 @@ export class durationPipe implements PipeTransform {
 
       } else if ( value/60 > 1 ) {
 
-        let hours = value/60;
+        let hours = Math.round(value/60);
         let minutes = value%60;
 
       return hours + 'h' + ' ' + minutes + 'min'

@@ -28,6 +28,8 @@ import {filterCoursesByName} from "./pipes/filterCoursesByName.pipe";
     CoursesComponent,
     ToolboxComponent,
     CoursePageComponent,
+
+
     BorderStyleDirective,
 
     durationPipe,
@@ -47,6 +49,8 @@ import {filterCoursesByName} from "./pipes/filterCoursesByName.pipe";
     CoursesComponent,
     ToolboxComponent,
     CoursePageComponent,
+
+
     BorderStyleDirective,
 
     durationPipe,

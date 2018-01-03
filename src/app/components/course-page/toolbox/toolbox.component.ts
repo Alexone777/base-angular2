@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output, EventEmitter} from '@angular/core';
+import {CourseService} from "../../../core/services/courses.service";
 
 @Component({
   selector: 'app-toolbox',
@@ -6,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['toolbox.component.scss']
 })
 export class ToolboxComponent implements OnInit {
-  public filterVal:string = '';
-  constructor() {
+
+  constructor( public courseService : CourseService) {
+
   }
   findCourse(){
-    console.log(this.filterVal);
-    this.filterVal = '';
   }
   addCourse(){
     console.log('addCourse');

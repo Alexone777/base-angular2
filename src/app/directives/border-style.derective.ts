@@ -1,4 +1,5 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
+import {CourseService} from "../core/services/courses.service";
 
 @Directive({
   selector: `[border-style]`
@@ -7,8 +8,16 @@ import { Directive, ElementRef, Input } from '@angular/core';
 
 export class BorderStyleDirective {
 
-  constructor(el: ElementRef,){
-    el.nativeElement.style.border = '3px solid green';
+
+  public upComming : any;
+
+  constructor(el: ElementRef, public courseService : CourseService){
+    el.nativeElement.style.border = '3px solid red';
+    this.upComming = this.courseService.isUpcomming();
   }
+
+
+
+
 
 }

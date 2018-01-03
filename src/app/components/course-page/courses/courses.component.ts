@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CourseService} from "../../../core/services/courses.service";
 import {ICourse} from "../../../interfaces/ICourse";
-import {filterCoursesByName} from "../../../shared/pipes/filterCoursesByName.pipe";
 
 
 @Component({
@@ -12,19 +11,19 @@ import {filterCoursesByName} from "../../../shared/pipes/filterCoursesByName.pip
 export class CoursesComponent implements OnInit {
 
   public courses: ICourse[];
+  public coursesItems: ICourse[];
 
   constructor( public courseService: CourseService ) {
 
   }
 
   ngOnInit() {
-
-    console.log();
     this.courses = this.courseService.getList()
   }
+
   deleteItem($event){
-    console.log();
-    console.log($event)
+    this.courseService.removeItem($event.id)
   }
+
 
 }
