@@ -1,6 +1,4 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-import {COURSES} from "../core/services/course-data";
-import {ICourse} from "../interfaces/ICourse";
 
 
 
@@ -9,10 +7,6 @@ import {ICourse} from "../interfaces/ICourse";
 })
 
 export class BorderStyleDirective {
-
-  public courses : ICourse[];
-  public coursesTopRated : any;
-
 
   @Input() borderStyle: boolean;
 
