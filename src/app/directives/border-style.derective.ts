@@ -1,23 +1,36 @@
-import { Directive, ElementRef } from '@angular/core';
-import {CourseService} from "../core/services/courses.service";
+import { Directive, ElementRef, Input } from '@angular/core';
+import {COURSES} from "../core/services/course-data";
+import {ICourse} from "../interfaces/ICourse";
+
+
 
 @Directive({
-  selector: `[border-style]`
+  selector: `[borderStyle]`
 })
-
 
 export class BorderStyleDirective {
 
+  public courses : ICourse[];
+  public coursesTopRated : any;
 
-  public upComming : any;
 
-  constructor(el: ElementRef, public courseService : CourseService){
-    el.nativeElement.style.border = '3px solid red';
-    this.upComming = this.courseService.isUpcomming();
+  @Input() borderStyle: boolean;
+
+  constructor(private el: ElementRef){
   }
 
+  ngOnInit(){
 
+    let border : string;
 
+    if (this.borderStyle) {
+      border = '3px solid green';
+    } else {
+      border = 'none';
+    }
+
+    this.el.nativeElement.style.border = border;
+  }
 
 
 }

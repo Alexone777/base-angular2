@@ -1,4 +1,4 @@
-<div class="b-course" border-style="courseService.isUpcomming()" [ngClass]="{star : course.topRated}">
+<div class="b-course" [borderStyle]="isUpcomming()" [ngClass]="{star : course.topRated}">
   <div class="b-course__wrapper">
     <div class="b-course__description">
       <div class="b-course__header">
@@ -7,7 +7,7 @@
         <span class="b-course__duration" >{{course.duration | transformHours}}</span>
         <span class="b-course__date">{{course.date | date:'dd/MM/yyyy'}}</span>
       </div>
-      <div class="b-course__context" *ngIf="courseService.isUpcomming()">
+      <div class="b-course__context" *ngIf="isUpcomming()">
         <p class="b-course__text">
           {{ course.description }}
         </p>

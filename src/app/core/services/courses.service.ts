@@ -12,14 +12,10 @@ export class CourseService {
   private courseList : ICourse[];
   public courseFilter : string;
   public course : any;
-  public today:any;
-  public timeDiff:number;
-  public diffDays:number;
 
 
   constructor(){
     this.courseList = COURSES;
-    this.today = new Date;
   }
 
   coursesList: ICourse[] = [];
@@ -54,13 +50,5 @@ export class CourseService {
     return this.courseList.filter(item => item.id !== id)
   }
 
-  public isUpcomming() {
-
-      if (this.diffDays > 0 && this.diffDays <= 14) {
-        return true
-      }
-      return false
-
-  }
 }
 
