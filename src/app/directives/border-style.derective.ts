@@ -20,7 +20,7 @@ export class BorderStyleDirective {
     if (this.borderStyle) {
       border = '3px solid green';
     } else {
-      border = 'none';
+      border = '3px solid orange';
     }
 
     this.el.nativeElement.style.border = border;

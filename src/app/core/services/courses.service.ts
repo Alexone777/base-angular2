@@ -30,24 +30,26 @@ export class CourseService {
     date,
     description,
     duration,
-    title
+    title,
+    upcoming
   }): ICourse {
     return {
-      id,topRated, date, description, duration, title
+      id,topRated, date, description, duration, title,upcoming
     }
   }
 
   public getItemByName(title:string){
+    console.log(title)
     return this.coursesList.filter(item => item.title === title)
   }
 
-  public updateItems(course: ICourse){
+  private updateItems(course: ICourse){
     this.coursesList = [...this.courseList, course];
     return this.coursesList
   }
   public removeItem(id:number){
-    console.log(this.courseList.filter(item => item.id !== id));
-    return this.courseList.filter(item => item.id !== id)
+    console.log(this.courseList.map(item => console.log(item.id !== id)));
+    return this.courseList.filter(x=>x.id !== id)
   }
 
 }
