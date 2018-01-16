@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { COURSES } from './course-data'
 import { ICourse } from '../../interfaces/ICourse'
+import { NgZone } from '@angular/core';
 
 
 
@@ -14,7 +15,7 @@ export class CourseService {
   public course : any;
 
 
-  constructor(){
+  constructor(private _ngZone: NgZone){
     this.courseList = COURSES;
   }
 
@@ -47,9 +48,9 @@ export class CourseService {
     this.coursesList = [...this.courseList, course];
     return this.coursesList
   }
+
   public removeItem(id:number){
-    console.log(this.courseList.map(item => console.log(item.id !== id)));
-    return this.courseList.filter(x=>x.id !== id)
+    return this.courseList = this.courseList.filter(x=>x.id !== id)
   }
 
 }

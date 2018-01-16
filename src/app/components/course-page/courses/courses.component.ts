@@ -11,7 +11,6 @@ import {ICourse} from "../../../interfaces/ICourse";
 export class CoursesComponent implements OnInit {
 
   public courses: ICourse[];
-  public coursesItems: ICourse[];
 
   constructor( public courseService: CourseService ) {
 
