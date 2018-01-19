@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {CourseService} from "../../../core/services/courses.service";
 import {ICourse} from "../../../interfaces/ICourse";
 
@@ -13,7 +13,6 @@ export class CoursesComponent implements OnInit {
   public courses: ICourse[];
 
   constructor( public courseService: CourseService ) {
-
   }
 
   ngOnInit() {
@@ -23,6 +22,5 @@ export class CoursesComponent implements OnInit {
   deleteItem($event){
     this.courseService.removeItem($event.id)
   }
-
 
 }
