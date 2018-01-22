@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { COURSES } from './course-data'
 import { ICourse } from '../../interfaces/ICourse'
-import { NgZone } from '@angular/core';
 
 
 
@@ -15,7 +14,7 @@ export class CourseService {
   public course : any;
 
 
-  constructor(private _ngZone: NgZone){
+  constructor(){
     this.courseList = COURSES;
   }
 
@@ -31,11 +30,10 @@ export class CourseService {
     date,
     description,
     duration,
-    title,
-    upcoming
+    title
   }): ICourse {
     return {
-      id,topRated, date, description, duration, title,upcoming
+      id,topRated, date, description, duration, title
     }
   }
 
