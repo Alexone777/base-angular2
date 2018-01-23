@@ -2,26 +2,26 @@ import { Injectable } from '@angular/core';
 
 import { COURSES } from './course-data'
 import { ICourse } from '../../interfaces/ICourse'
+import {Observable} from "rxjs/Observable";
 
 
 
 @Injectable()
 export class CourseService {
 
-
-  private courseList : ICourse[];
+  public courseList : ICourse[];
   public courseFilter : string;
   public course : any;
 
 
   constructor(){
-    this.courseList = COURSES;
+
   }
 
   coursesList: ICourse[] = [];
 
   public getList(){
-    return this.courseList
+    return Observable.of({courseList: COURSES});
   }
 
   public createCourse({

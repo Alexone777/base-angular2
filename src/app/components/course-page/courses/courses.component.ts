@@ -10,17 +10,20 @@ import {ICourse} from "../../../interfaces/ICourse";
 })
 export class CoursesComponent implements OnInit {
 
-  public courses: ICourse[];
-
   constructor( public courseService: CourseService ) {
   }
 
   ngOnInit() {
-    this.courses = this.courseService.getList()
+    this.courseService.getList().subscribe(res => {
+      this.courseService.courseList = res.courseList;
+    })
   }
 
   deleteItem($event){
     this.courseService.removeItem($event.id)
   }
 
+  updateObj() {
+    this.courseService.courseList[0] = {...this.courseService.courseList[0]};
+  }
 }

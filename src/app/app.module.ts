@@ -9,12 +9,12 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import {SharedModule} from "./shared/shared.module";
 import {CoursePageModule} from "./components/course-page/course-page.module";
 
+import 'rxjs/add/observable/of';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -26,5 +26,4 @@ import {CoursePageModule} from "./components/course-page/course-page.module";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}

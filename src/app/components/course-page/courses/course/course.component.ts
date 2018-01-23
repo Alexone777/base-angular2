@@ -1,17 +1,17 @@
-import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy} from '@angular/core';
 import {ICourse} from "../../../../interfaces/ICourse";
 import {CourseService} from "../../../../core/services/courses.service";
 
 
 @Component({
   selector: 'app-course',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: 'course.component.html',
   styleUrls: ['course.component.scss'],
 })
 
 
 export class CourseComponent implements OnInit {
-
 
   @Input('course') course : ICourse;
   @Output('delete') deleteItem = new EventEmitter();

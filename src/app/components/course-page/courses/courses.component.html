@@ -1,5 +1,10 @@
 <ul class="l-courses">
-  <li class="l-courses__item" *ngFor="let course of courseService.getList() | filterByName: courseService.courseFilter" >
+  <li>
+    <input type="text"
+           (change)="updateObj()"
+           [(ngModel)]="courseService.courseList[0].title" name="asdf">
+  </li>
+  <li class="l-courses__item" *ngFor="let course of courseService.courseList | filterByName: courseService.courseFilter" >
     <app-course [course]="course" (delete)="deleteItem($event)"></app-course>
   </li>
 </ul>
