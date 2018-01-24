@@ -2,7 +2,6 @@ import {Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy}
 import {ICourse} from "../../../../interfaces/ICourse";
 import {CourseService} from "../../../../core/services/courses.service";
 
-
 @Component({
   selector: 'app-course',
   changeDetection: ChangeDetectionStrategy.OnPush,

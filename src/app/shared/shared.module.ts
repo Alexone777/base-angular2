@@ -7,12 +7,12 @@ import {LogInComponent} from "./header/log-in/log-in.component";
 import {MenuComponent} from "./header/menu/menu.component";
 import {CommonModule, DatePipe, UpperCasePipe} from "@angular/common";
 import {FormsModule} from "@angular/forms";
-import {BorderStyleDirective} from "../directives/border-style.derective";
 import {durationPipe} from "./pipes/durationPipe.pipe";
 import {filterCoursesByName} from "./pipes/filterCoursesByName.pipe";
 import {ToolboxComponent} from "../components/course-page/toolbox/toolbox.component";
 import {CourseComponent} from "../components/course-page/courses/course/course.component";
 import {CoursesComponent} from "../components/course-page/courses/courses.component";
+import {BorderStyleDirective} from "../components/course-page/directives/course.derective";
 
 
 @NgModule({

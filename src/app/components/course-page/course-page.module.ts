@@ -4,12 +4,14 @@ import {CoursePageComponent} from "./course-page.component";
 
 
 @NgModule({
-  declarations: [CoursePageComponent],
+  declarations: [
+    CoursePageComponent,
+  ],
   imports: [
-    SharedModule,
+    SharedModule
   ],
   exports: [
-    CoursePageComponent
+    CoursePageComponent,
   ]
 
 
