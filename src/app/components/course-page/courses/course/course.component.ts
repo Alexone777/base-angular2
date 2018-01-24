@@ -32,7 +32,4 @@ export class CourseComponent implements OnInit {
       id : this.course.id
     })
   }
-  isUpcomming() : number {
-    return Math.ceil((+new Date() - this.course.date) / (1000 * 3600 * 24))
-  }
 }
