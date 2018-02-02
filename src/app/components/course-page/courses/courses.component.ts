@@ -14,7 +14,13 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit() {
     this.courseService.getList().subscribe(res => {
-      this.courseService.courseList = res.courseList;
+      this.courseService.courseList = res.courseList
+        .map(x=>x)
+        .filter(x=> {
+          if((x.date - +new Date()) / (1000 * 3600 * 24) >= -1) {
+            return x
+          }
+        });
     })
   }
 

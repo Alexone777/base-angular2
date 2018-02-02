@@ -14,7 +14,7 @@ export const COURSES : ICourse[] = [
     id : 2,
     topRated : false,
     duration : 210,
-    date : new Date(2017,2,3),
+    date : new Date(2018,15,2),
     description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolorem ipsum itaque laudantium maiores neque nihil odio rerum velit voluptates.'
   },{
     title : 'ViewJS',
