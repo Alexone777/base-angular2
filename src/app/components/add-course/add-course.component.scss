@@ -1,0 +1,26 @@
+.f-add-course {
+  display: block;
+  padding: 30px;
+  background: #e6ecf0;
+  max-width: 400px;
+  margin: 0 auto;
+  &__span {
+    max-width: 100px;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    padding-right: 10px;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+  }
+  &__input {
+    display: inline-block;
+    width: calc(100% - 100px);
+  }
+}

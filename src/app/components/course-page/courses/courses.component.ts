@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {CourseService} from "../../../core/services/courses.service";
+import {ICourse} from "../../../interfaces/ICourse";
 
 
 @Component({
@@ -9,10 +10,13 @@ import {CourseService} from "../../../core/services/courses.service";
 })
 export class CoursesComponent implements OnInit {
 
+  public courses: ICourse[]
+
   constructor( public courseService: CourseService ) {
   }
 
   ngOnInit() {
+
     this.courseService.getList().subscribe(res => {
       this.courseService.courseList = res.courseList
         .map(x=>x)

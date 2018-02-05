@@ -1,0 +1,8 @@
+.b-courses {
+  display: flex;
+  &__link {
+    &._length {
+      margin-left: 10px;
+    }
+  }
+}

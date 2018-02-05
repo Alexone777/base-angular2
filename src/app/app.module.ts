@@ -10,11 +10,13 @@ import {SharedModule} from "./shared/shared.module";
 import {CoursePageModule} from "./components/course-page/course-page.module";
 
 import 'rxjs/add/observable/of';
+import { AddCourseComponent } from './components/add-course/add-course.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
+    AddCourseComponent,
   ],
   imports: [
     BrowserModule,
