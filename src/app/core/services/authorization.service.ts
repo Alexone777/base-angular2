@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {RequestService} from "./request.service";
 
 @Injectable()
 export class AuthorizationService {
@@ -7,10 +8,41 @@ export class AuthorizationService {
 
 
 
-  constructor(){
+  constructor(private request: RequestService){
 
   }
 
+  login(login, password) {
+    this.request.post('auth/login', {login, password})
+      .subscribe((res) => {
+        console.log(res)
+        this.setAuthKey(res.token)
+      })
+  }
+
+  getAuthKey() {
+    return localStorage.get('token');
+  };
+
+  setAuthKey(authkey) {
+    if (authkey) {
+      localStorage.setItem('token', authkey);
+    } else {
+      localStorage.removeItem(authkey);
+    }
+  };
+
+  getUserInfo() {
+    this.request.post('auth/userinfo', {})
+      .subscribe(res => {
+        debugger;
+      })
+  }
+
+  isAuthorized = () => !!this.getAuthKey();
+
+
+ /*
   logIn(){
     console.log(this.user);
     localStorage.setItem('user', this.user);
@@ -30,4 +62,5 @@ export class AuthorizationService {
   GetUserInfo(): string {
     return localStorage.getItem('user');
   }
+  */
 }

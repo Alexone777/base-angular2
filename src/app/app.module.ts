@@ -11,6 +11,7 @@ import {CoursePageModule} from "./components/course-page/course-page.module";
 
 import 'rxjs/add/observable/of';
 import { AddCourseComponent } from './components/add-course/add-course.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { AddCourseComponent } from './components/add-course/add-course.component
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     CoreModule,
     SharedModule,
     CoursePageModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

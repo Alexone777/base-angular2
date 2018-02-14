@@ -7,15 +7,14 @@ import {AuthorizationService} from "../../core/services/authorization.service";
   styleUrls: ['login-page.component.scss'],
   providers: [AuthorizationService]
 })
-export class LoginPageComponent implements OnInit {
-  public user : string;
+export class LoginPageComponent {
+  public login: string = 'Warner';
+  public password: string = 'ea';
+
   constructor(public authorizationService : AuthorizationService) {
   }
 
-  ngOnInit() {
-  }
-
-  getUser(){
-    this.authorizationService.user = this.user;
+  logIn() {
+    this.authorizationService.login(this.login, this.password);
   }
 }

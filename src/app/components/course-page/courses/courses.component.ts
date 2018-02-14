@@ -9,30 +9,16 @@ import {ICourse} from "../../../interfaces/ICourse";
   styleUrls: ['courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-
-  public courses: ICourse[]
+  public start = 0;
+  public count = 10;
 
   constructor( public courseService: CourseService ) {
   }
 
   ngOnInit() {
 
-    this.courseService.getList().subscribe(res => {
-      this.courseService.courseList = res.courseList
-        .map(x=>x)
-        .filter(x=> {
-          if((x.date - +new Date()) / (1000 * 3600 * 24) >= -1) {
-            return x
-          }
-        });
+    this.courseService.getList({start: this.start, count: this.count}).subscribe(res => {
+      console.log(res)
     })
-  }
-
-  deleteItem($event){
-    this.courseService.removeItem($event.id)
-  }
-
-  updateObj() {
-    this.courseService.courseList[0] = {...this.courseService.courseList[0]};
   }
 }

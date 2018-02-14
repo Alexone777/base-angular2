@@ -1,16 +1,18 @@
 <div class="container">
   <section class="s-log-in">
     <div class="b-log-in">
-      <form action="" class="f-log-in">
+      <form class="f-log-in" novalidate>
         <label class="f-log-in__label">
           <span class="f-log-in__text">Name :</span>
-          <input type="text" class="f-log-in__input" name="userField" [(ngModel)]="user" (change)="getUser()">
+          <input type="text" class="f-log-in__input" name="login" [(ngModel)]="login">
         </label>
         <label class="f-log-in__label">
           <span class="f-log-in__text">Password :</span>
-          <input type="text" class="f-log-in__input">
+          <input type="password" class="f-log-in__input" name="password" [(ngModel)]="password">
         </label>
-        <button class="f-log-in__btn" (click)="authorizationService.logIn()">Enter</button>
+        <button class="f-log-in__btn" (click)="logIn()">Enter</button>
+
+        <button type="button" class="f-log-in__btn" (click)="authorizationService.getUserInfo()">getUser</button>
       </form>
     </div>
   </section>
