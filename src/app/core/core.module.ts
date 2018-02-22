@@ -11,8 +11,7 @@ import {TokenInterceptor} from "./interceptors/token.interceptor";
   providers: [
     CourseService,
     RequestService,
-    AuthorizationService,
-    TokenInterceptor
+    AuthorizationService
   ],
   bootstrap: []
 })

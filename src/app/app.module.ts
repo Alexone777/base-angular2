@@ -11,7 +11,8 @@ import {CoursePageModule} from "./components/course-page/course-page.module";
 
 import 'rxjs/add/observable/of';
 import { AddCourseComponent } from './components/add-course/add-course.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {TokenInterceptor} from "./core/interceptors/token.interceptor";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,12 @@ import {HttpClientModule} from "@angular/common/http";
     CoursePageModule
   ],
   providers: [
+
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

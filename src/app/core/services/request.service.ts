@@ -38,8 +38,8 @@ export class RequestService {
       );
   }
 
-  post(url: string, body: any) {
-    return this.http.post(this.configureUrl(url), body)
+  post(url: string, body: any, params?: any) {
+    return this.http.post(this.configureUrl(url), body, params)
       .pipe(
         catchError(this.handleError)
       );

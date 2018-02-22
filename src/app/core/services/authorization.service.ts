@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import {RequestService} from "./request.service";
+import {ReplaySubject} from "rxjs/ReplaySubject";
 
 @Injectable()
 export class AuthorizationService {
   public user: string;
 
-
-
+  public subject: ReplaySubject<string> = new ReplaySubject();
 
   constructor(private request: RequestService){
 
@@ -21,7 +21,7 @@ export class AuthorizationService {
   }
 
   getAuthKey() {
-    return localStorage.get('token');
+    return localStorage.getItem('token');
   };
 
   setAuthKey(authkey) {
@@ -35,32 +35,20 @@ export class AuthorizationService {
   getUserInfo() {
     this.request.post('auth/userinfo', {})
       .subscribe(res => {
+        this.subject.next(res.name.first);
+      },(err) => {
+        console.log(err);
         debugger;
       })
+  };
+
+  logoff(){
+    localStorage.removeItem('token');
+    this.subject.unsubscribe()
+    console.log(123);
   }
 
   isAuthorized = () => !!this.getAuthKey();
 
 
- /*
-  logIn(){
-    console.log(this.user);
-    localStorage.setItem('user', this.user);
-    localStorage.setItem('password', 'anyPassword');
-  }
-
-  logOff(){
-    console.log('login');
-    localStorage.removeItem('user');
-    localStorage.removeItem('password');
-  }
-
-  IsAuthenticated():boolean {
-    return localStorage.getItem('user') !== 'anyUser';
-  }
-
-  GetUserInfo(): string {
-    return localStorage.getItem('user');
-  }
-  */
 }
