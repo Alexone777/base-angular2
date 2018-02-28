@@ -1,10 +1,12 @@
 <section class="s-add-course">
   <div class="container">
     <div class="b-add-course__form">
-      <form action="" class="f-add-course">
+      <form action="" class="f-add-course" *ngIf="(course$ | async) as course">
         <label class="f-add-course__label _title">
+
           <span class="f-add-course__span">Title</span>
-          <input type="text" class="f-add-course__input">
+
+          <input type="text" class="f-add-course__input" name="name" [(ngModel)]="course.name">
         </label>
         <label class="f-add-course__label _description">
           <span class="f-add-course__span">Description</span>

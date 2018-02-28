@@ -10,8 +10,6 @@ import {FormsModule} from "@angular/forms";
 import {durationPipe} from "./pipes/durationPipe.pipe";
 import {filterCoursesByName} from "./pipes/filterCoursesByName.pipe";
 import {ToolboxComponent} from "../components/course-page/toolbox/toolbox.component";
-import {CourseComponent} from "../components/course-page/courses/course/course.component";
-import {CoursesComponent} from "../components/course-page/courses/courses.component";
 import {BorderStyleDirective} from "../components/course-page/directives/course.derective";
 
 
@@ -21,9 +19,7 @@ import {BorderStyleDirective} from "../components/course-page/directives/course.
     LogoComponent,
     FooterComponent,
     LogInComponent,
-    CourseComponent,
     MenuComponent,
-    CoursesComponent,
     ToolboxComponent,
 
 
@@ -41,9 +37,7 @@ import {BorderStyleDirective} from "../components/course-page/directives/course.
     LogoComponent,
     FooterComponent,
     LogInComponent,
-    CourseComponent,
     MenuComponent,
-    CoursesComponent,
     ToolboxComponent,
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {CourseService} from "../../../core/services/courses.service";
 import {ICourse} from "../../../interfaces/ICourse";
+import {Observable} from "rxjs/Observable";
 
 
 @Component({
@@ -10,15 +11,20 @@ import {ICourse} from "../../../interfaces/ICourse";
 })
 export class CoursesComponent implements OnInit {
   public start = 0;
-  public count = 10;
+  public count = 3;
+  public courses$: Observable<ICourse[]>;
 
   constructor( public courseService: CourseService ) {
   }
 
   ngOnInit() {
-
-    this.courseService.getList({start: this.start, count: this.count}).subscribe(res => {
-      console.log(res)
-    })
+    this.updateCourses()
+  }
+  addCourse(){
+    this.start += 3;
+    this.updateCourses()
+  }
+  private updateCourses(){
+    this.courses$ = this.courseService.getList({start: this.start, count: this.count})
   }
 }

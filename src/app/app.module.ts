@@ -1,3 +1,5 @@
+
+import {AppRoutingModule} from "./app-routing.module.";
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -10,7 +12,6 @@ import {SharedModule} from "./shared/shared.module";
 import {CoursePageModule} from "./components/course-page/course-page.module";
 
 import 'rxjs/add/observable/of';
-import { AddCourseComponent } from './components/add-course/add-course.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TokenInterceptor} from "./core/interceptors/token.interceptor";
 
@@ -18,9 +19,9 @@ import {TokenInterceptor} from "./core/interceptors/token.interceptor";
   declarations: [
     AppComponent,
     LoginPageComponent,
-    AddCourseComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,

@@ -3,7 +3,7 @@
     <div class="b-course__description">
       <div class="b-course__header">
         <span class="b-course__id">{{course.id}}.</span>
-        <h3 class="b-course__title">{{course.title | uppercase}}</h3>
+        <h3 class="b-course__title">{{course.name | uppercase}}</h3>
         <span class="b-course__duration">{{course.duration | transformHours}}</span>
         <span class="b-course__date">{{course.date | date:'dd/MM/yyyy'}}</span>
       </div>
@@ -19,7 +19,8 @@
       </div>
     </div>
     <div class="b-course__config">
-      <button class="b-course__btn _edit" (click)="editCourse()">Edit</button>
+      <a class="b-course__btn _edit" [routerLink]="['/courses', course.id]" style="font-size: 16px;">Edit</a>
+      <!--<a class="b-course__btn _edit" routerLink="/courses" style="font-size: 16px;">Edit</a>-->
       <button class="b-course__btn _delete" (click)="deleteCourse(course.id)">Delete</button>
     </div>
   </div>
