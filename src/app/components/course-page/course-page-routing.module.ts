@@ -3,11 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import {CoursePageComponent} from "./course-page.component";
 import {AddCourseComponent} from "../add-course/add-course.component";
 import {NewCourseComponent} from "../new-course/new-course.component";
+import {ErrorComponent} from "../404/404.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: CoursePageComponent
+    component: CoursePageComponent,
+    children: [
+      { path: 'new', redirectTo: 'new', pathMatch: 'full' },
+    ]
   },
   {
     path: ':id',

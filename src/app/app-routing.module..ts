@@ -13,10 +13,6 @@ const routes: Routes = [
     component: NewCourseComponent
   },
   {
-    path: '**',
-    component: ErrorComponent
-  },
-  {
     path: '',
     redirectTo: '/courses',
     pathMatch: 'full'
