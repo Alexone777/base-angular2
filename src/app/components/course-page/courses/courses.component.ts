@@ -27,4 +27,9 @@ export class CoursesComponent implements OnInit {
   private updateCourses(){
     this.courses$ = this.courseService.getList({start: this.start, count: this.count})
   }
+  deleteCourse(id){
+    console.log(this.courses$.subscribe(res=>{
+      console.log(res);
+    }));
+  }
 }

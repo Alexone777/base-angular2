@@ -5,7 +5,7 @@
            <!--[(ngModel)]="courseService.courseList[0].title" name="asdf">-->
   <!--</li>-->
   <li class="l-courses__item" *ngFor="let course of courses$ | async" >
-    <app-course [course]="course" (delete)="deleteItem($event)"></app-course>
+    <app-course [course]="course" (delete)="deleteCourse($event)"></app-course>
   </li>
 </ul>
 <button type="button" (click)="addCourse()">add course</button>

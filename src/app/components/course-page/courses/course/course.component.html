@@ -7,20 +7,15 @@
         <span class="b-course__duration">{{course.duration | transformHours}}</span>
         <span class="b-course__date">{{course.date | date:'dd/MM/yyyy'}}</span>
       </div>
-      <div class="b-course__context" *ngIf="course.upcoming < 14">
+      <div class="b-course__context">
         <p class="b-course__text">
           {{ course.description }}
         </p>
       </div>
-      <div class="b-course__context" *ngIf="course.upcoming < 14=== false">
-        <p class="b-course__text">
-          No data. Feel free to add new course!
-        </p>
-      </div>
+
     </div>
     <div class="b-course__config">
       <a class="b-course__btn _edit" [routerLink]="['/courses', course.id]" style="font-size: 16px;">Edit</a>
-      <!--<a class="b-course__btn _edit" routerLink="/courses" style="font-size: 16px;">Edit</a>-->
       <button class="b-course__btn _delete" (click)="deleteCourse(course.id)">Delete</button>
     </div>
   </div>

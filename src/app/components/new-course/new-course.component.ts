@@ -7,26 +7,26 @@ import {ICourse} from "../../interfaces/ICourse";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-add-course',
-  templateUrl: './add-course.component.html',
-  styleUrls: ['add-course.component.scss']
+  selector: 'app-new-course',
+  templateUrl: './new-course.component.html',
+  styleUrls: ['new-course.component.scss']
 })
-export class AddCourseComponent implements OnInit {
+export class NewCourseComponent implements OnInit {
 
-  public course$: Observable<ICourse>;
-  public courseForm: FormGroup;
+  // public course$: Observable<ICourse>;
+  public newForm: FormGroup;
 
-  constructor(private route:ActivatedRoute, private service: CourseService, private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.course$ = this.route.paramMap
-      .switchMap((params: any) => this.service.getCourse(parseInt(params.get('id'),10)));
-    console.log(this.course$);
+    // this.course$ = this.route.paramMap
+    //   .switchMap((params: any) => this.service.getCourse(parseInt(params.get('id'),10)));
+    // console.log(this.course$);
     this.createForm();
   }
 
   createForm() {
-    this.courseForm = this.fb.group({
+    this.newForm = this.fb.group({
       name: ['', Validators.required ],
       description: ['', Validators.required ],
       length: ['', Validators.required ],

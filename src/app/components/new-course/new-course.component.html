@@ -1,31 +1,30 @@
 <section class="s-add-course">
   <div class="container">
     <div class="b-add-course__form">
-      <form action="" class="f-add-course" *ngIf="(course$ | async) as course" [formGroup]="courseForm"
+      <form action="" class="f-add-course"  [formGroup]="newForm"
             (submit)="onSubmit()">
         <label class="f-add-course__label _title">
           <span class="f-add-course__span">Title</span>
-          <input formControlName="name" type="text" class="f-add-course__input" name="name" [(ngModel)]="course.name">
+          <input formControlName="name" type="text" class="f-add-course__input" name="name" >
         </label>
 
         <label class="f-add-course__label _description">
           <span class="f-add-course__span">Description</span>
           <textarea class="f-add-course__input" formControlName="description" name="description"
-                    [(ngModel)]="course.description"></textarea>
+                    ></textarea>
         </label>
-
         <label class="f-add-course__label _duration">
           <span class="f-add-course__span">Duration</span>
           <input type="text" class="f-add-course__input" formControlName="length" name="length"
-                 [(ngModel)]="course.length">
+                 >
         </label>
         <label class="f-add-course__label _date">
           <span class="f-add-course__span">Date</span>
           <input type="text" class="f-add-course__input" formControlName="date" name="date"
-                 [(ngModel)]="course.date">
+                 >
         </label>
         <div class="f-add-course-btn__wrapper">
-          <button class="f-add-course-btn" type="submit" [disabled]="courseForm.invalid">Save</button>
+          <button class="f-add-course-btn" type="submit" [disabled]="newForm.invalid">Save</button>
           <a class="f-add-course-btn" routerLink="/courses">Cancel</a>
         </div>
       </form>
